@@ -7,8 +7,11 @@ from io import BytesIO
 # Testing to read PDF
 def readPDF(response):
     st.write(f"URL provided: {response.status_code}")
-    pdf_data = BytesIO(response.content)
-    st.write(f"URL provided: {pdf_data}")
+    if response.status_code == 200:
+        pdf_data = BytesIO(response.content)
+        st.write(f"URL provided: {pdf_data}")
+    else:
+        st.write("Not able to read the pdf")
 
 
 def home():
