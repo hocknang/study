@@ -9,7 +9,21 @@ def readPDF(response):
     st.write(f"URL provided: {response.status_code}")
     if response.status_code == 200:
         pdf_data = BytesIO(response.content)
-        st.write(f"URL provided: {pdf_data}")
+        st.write(f"Bytes provided: {pdf_data}")
+        pdf_reader = PdfReader(pdf_data)
+
+        # Extract and display text from the PDF
+        pdf_text = ""
+        for page_num in range(len(pdf_reader.pages)):
+            page = pdf_reader.pages[page_num]
+            pdf_text += page.extract_text()  # Extract text from the page
+
+        # Display the extracted text
+        if pdf_text:
+            st.write("### Extracted PDF Text:")
+            st.write(pdf_text)
+        else:
+            st.write("No text could be extracted from the PDF.")
     else:
         st.write("Not able to read the pdf")
 
