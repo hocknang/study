@@ -35,3 +35,4 @@ def home():
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
         response = requests.get(document_url)
+        st.write(f"URL provided: {response.status_code}")
