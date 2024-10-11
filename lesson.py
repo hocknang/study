@@ -34,6 +34,9 @@ def home():
     if document_url:
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
+        response = requests.get(document_url)
+         st.write(f"Status Code: {response.status_code})
+
         
         
        
