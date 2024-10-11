@@ -7,7 +7,6 @@ from io import BytesIO
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
         st.write(f"URL provided: {document_url}")
-        st.button("Submit")
         response = requests.get(document_url)
         readPDF(response)
     elif uploaded_file is not None:
@@ -71,7 +70,7 @@ def home():
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
         st.write(f"File uploaded: {uploaded_file.name}")
-        pdfReader(document_url, uploaded_file)
+        st.button("Submit")
 
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
@@ -80,6 +79,8 @@ def home():
     if document_url:
         st.write(f"URL provided: {document_url}")
         #
-        pdfReader(document_url, uploaded_file)
+        st.button("Submit")
 
+    if st.button("Submit"):
+        pdfReader(document_url, uploaded_file)
 
