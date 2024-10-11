@@ -29,14 +29,7 @@ def home():
         st.write(f"File uploaded: {uploaded_file.name}")
 
     elif option == "Provide a document URL":
-        document_url = st.text_input("Please enter the document URL:")
+        document_url = st.text_input("Please enter the document URL (Press Enter to Apply):")
+        
     
-    if document_url:
-        # Display a confirmation message or handle the URL
-        st.write(f"URL provided: {document_url}")
-        response = requests.get(document_url)
-
-        if response.status_code == 200: 
-            st.write(f"URL provided: {response.status_code}")
-        else:
-            st.write(f"URL provided: {response.status_code}") 
+  
