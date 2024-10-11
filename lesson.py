@@ -5,7 +5,7 @@ from io import BytesIO
 
 
 def pdfReader(document_url, uploaded_file):
-    st.button("Submit")
+    st.button("Get Answer", key="get_answer_button")
     if document_url is not None:
         st.write(f"URL provided: {document_url}")
         st.button("Submit")
