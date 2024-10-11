@@ -34,6 +34,8 @@ def home():
     if document_url:
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
+
+    #https://eservices.mom.gov.sg/iwork/assets/pdf/EmPOWER%20Terms%20and%20conditions.pdf
         
     
   
