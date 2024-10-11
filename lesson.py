@@ -1,6 +1,11 @@
 import streamlit as st
 import pypdf
 
+def readPdf(pdf_url): 
+    response = requests.get(pdf_url)
+    
+    st.write(f"File uploaded: {uploaded_file.nam
+
 def home():
     st.title("Term & Condition")
     st.write('Hi this is Term & Condition Explorer ChatBot')
@@ -25,13 +30,13 @@ def home():
     
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
-        st.write(f"File uploaded: {uploaded_file.name}")
+        #st.write(f"File uploaded: {uploaded_file.name}")
 
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
     
     if document_url:
         # Display a confirmation message or handle the URL
-        st.write(f"URL provided: {document_url}")
-
-     #
+        #st.write(f"URL provided: {document_url}")
+         readPdf(document_url)
+    
