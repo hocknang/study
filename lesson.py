@@ -4,12 +4,28 @@ import streamlit as st
 def home():
     st.title("Term & Condition")
     st.write('Hi this is Term & Condition Explorer ChatBot')
+
+    # Prompt the user to choose how they'd like to provide the document
+    st.write("Would you prefer to upload a file or provide a document URL?")
+
+    # Create a dropdown for the user to select an option
+    option = st.selectbox(
+        "Choose an option:",
+        ["Upload a file", 
+        "Provide a document URL"]
+    )
+
+    # Handle the option selected by the user
+    if option == "Upload a file":
+        uploaded_file = st.file_uploader("Please upload your file here:")
     
-    # Dropdown with options
-    options = ["Search Using Provided Url", "Option 2"]
+    if uploaded_file is not None:
+        # Display a confirmation message or handle the uploaded file
+        st.write(f"File uploaded: {uploaded_file.name}")
 
-    # Create a dropdown selectbox
-    selected_option = st.selectbox("Choose an option:", options)
-
-    # Display the selected option
-    st.write(f"You selected: {selected_option}")
+    elif option == "Provide a document URL":
+        document_url = st.text_input("Please enter the document URL:")
+    
+    if document_url:
+        # Display a confirmation message or handle the URL
+        st.write(f"URL provided: {document_url}")
