@@ -1,6 +1,6 @@
 import streamlit as st
-import pypdf
-import requests
+from PyPDF2 import PdfReader
+from io import BytesIO
 
 def home():
     st.title("Term & Condition")
@@ -41,6 +41,9 @@ def home():
         if document_url:
             response = requests.get(document_url)
             st.write(f"URL provided: {response.status_code}")
+
+
+
         else:
             st.error("Please enter something before pressing Submit!")
         
