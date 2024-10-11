@@ -26,8 +26,9 @@ def readPDF(response):
         pdf_data = BytesIO(response.content)
         st.write(f"Bytes provided: {pdf_data}")
         pdf_reader = PdfReader(pdf_data)
-        
-        readContentPDF(pdf_reader)
+
+        #Working code to read the pdf content
+        #readContentPDF(pdf_reader)
 
     else:
         st.write("Not able to read the pdf")
@@ -53,7 +54,7 @@ def home():
 
     # Handle the option selected by the user
     if option == "Upload a file":
-        uploaded_file = st.file_uploader("Please upload your file here:")
+        uploaded_file = st.file_uploader("Please upload your file here:", type="pdf")
 
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
@@ -72,6 +73,10 @@ def home():
         if document_url:
             response = requests.get(document_url)
             readPDF(response)
-
+            pdf_reader = PdfReader(uploaded_file)
+        elif uploaded_file is not None:
+            # Working code to read the pdf content
+            pdf_reader = PdfReader(uploaded_file)
+            readContentPDF(pdf_reader)
         else:
             st.error("Please enter something before pressing Submit!")
