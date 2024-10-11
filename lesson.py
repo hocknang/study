@@ -39,7 +39,8 @@ def home():
 
     if st.button("Submit"):
         if document_url:
-            st.write(f"You entered: {document_url}")
+            response = requests.get(document_url)
+            st.write(f"URL provided: {response.status_code}")
         else:
             st.error("Please enter something before pressing Submit!")
         
