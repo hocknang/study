@@ -70,7 +70,7 @@ def home():
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
         st.write(f"File uploaded: {uploaded_file.name}")
-        st.button("Submit")
+        #st.button("Submit")
 
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
@@ -79,7 +79,7 @@ def home():
     if document_url:
         st.write(f"URL provided: {document_url}")
         #
-        st.button("Submit")
+        #st.button("Submit")
 
     if st.button("Submit"):
         pdfReader(document_url, uploaded_file)
