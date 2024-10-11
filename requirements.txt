@@ -1,4 +1,4 @@
-pypdf
 streamlit
 openai
 requests
+PyPDF2
