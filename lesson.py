@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_pdf_viewer import pdf_viewer
+import pypdf
 
 def home():
     st.title("Term & Condition")
