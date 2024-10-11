@@ -1,3 +1,4 @@
+import requests
 import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
@@ -41,8 +42,8 @@ def home():
         if document_url:
             response = requests.get(document_url)
             st.write(f"URL provided: {response.status_code}")
-
-
+            pdf_data = BytesIO(response.content)
+            st.write(f"URL provided: {pdf_data}")
 
         else:
             st.error("Please enter something before pressing Submit!")
