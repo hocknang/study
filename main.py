@@ -7,7 +7,7 @@ def page_home():
 
 # Create a dictionary of pages
 pages = {
-    "Term and Condition": page_home,
+    "Explorer Chatbots": page_home,
 }
 
 # Add a sidebar for navigation
