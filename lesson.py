@@ -36,6 +36,12 @@ def home():
         st.write(f"URL provided: {document_url}")
 
     #https://eservices.mom.gov.sg/iwork/assets/pdf/EmPOWER%20Terms%20and%20conditions.pdf
+
+    if st.button("Submit"):
+        if document_url:
+            st.write(f"You entered: {document_url}")
+        else:
+            st.error("Please enter something before pressing Submit!")
         
     
   
