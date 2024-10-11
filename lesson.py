@@ -1,5 +1,5 @@
 import streamlit as st
-import fitz  # PyMuPDF
+from streamlit_pdf_viewer import pdf_viewer
 
 def home():
     st.title("Term & Condition")
