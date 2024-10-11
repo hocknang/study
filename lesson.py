@@ -78,7 +78,9 @@ def home():
     if document_url:
         st.write(f"URL provided: {document_url}")
         #
-        
+
+    '''
     if st.button("Submit"):
         pdfReader(document_url, uploaded_file)
+    '''
 
