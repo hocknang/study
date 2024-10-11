@@ -1,9 +1,9 @@
 import streamlit as st
-import study as study
+import lesson as lesson
 
 #Define the pages: 
 def page_home():
-    study.home()
+    lesson.home()
 
 # Create a dictionary of pages
 pages = {
