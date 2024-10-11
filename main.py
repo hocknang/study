@@ -7,7 +7,7 @@ def page_home():
 
 # Create a dictionary of pages
 pages = {
-    "EmPOWER": page_home,
+    "Term and Condition": page_home,
 }
 
 # Add a sidebar for navigation
