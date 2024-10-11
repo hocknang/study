@@ -59,6 +59,7 @@ def home():
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
         st.write(f"File uploaded: {uploaded_file.name}")
+        st.button("Submit")
 
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
@@ -66,17 +67,17 @@ def home():
     if document_url:
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
+        st.button("Submit")
 
     # https://eservices.mom.gov.sg/iwork/assets/pdf/EmPOWER%20Terms%20and%20conditions.pdf
 
-    if st.button("Submit"):
-        if document_url:
-            response = requests.get(document_url)
-            readPDF(response)
-            pdf_reader = PdfReader(uploaded_file)
-        elif uploaded_file is not None:
-            # Working code to read the pdf content
-            pdf_reader = PdfReader(uploaded_file)
-            readContentPDF(pdf_reader)
-        else:
-            st.error("Please enter something before pressing Submit!")
+    if document_url:
+        response = requests.get(document_url)
+        readPDF(response)
+        pdf_reader = PdfReader(uploaded_file)
+    elif uploaded_file is not None:
+        # Working code to read the pdf content
+        pdf_reader = PdfReader(uploaded_file)
+        readContentPDF(pdf_reader)
+     else:
+        st.error("Please enter something before pressing Submit!")
