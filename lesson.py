@@ -1,6 +1,6 @@
 import streamlit as st
 import pypdf
-from io import BytesIO
+import requests
 
 def home():
     st.title("Term & Condition")
