@@ -3,5 +3,5 @@ import streamlit as st
 
 def home():
     st.title("Term & Condition")
-    st.write('About Us')
+    st.write('Hi this is Term & Condition Explorer ChatBot')
 
