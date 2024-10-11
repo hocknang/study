@@ -4,6 +4,19 @@ from PyPDF2 import PdfReader
 from io import BytesIO
 
 
+def pdfReader(document_url, uploaded_file):
+    if document_url is not None:
+        st.write(f"URL provided: {document_url}")
+        st.button("Submit")
+        response = requests.get(document_url)
+        readPDF(response)
+    elif uploaded_file is not None:
+        # Working code to read the pdf content
+        pdf_reader = PdfReader(uploaded_file)
+        readContentPDF(pdf_reader)
+    else:
+        st.error("Please enter something before pressing Submit!")
+
 # Testing to read PDF Content
 def readContentPDF(pdf_reader):
     # Extract and display text from the PDF
@@ -18,7 +31,6 @@ def readContentPDF(pdf_reader):
         st.write(pdf_text)
     else:
         st.write("No text could be extracted from the PDF.")
-
 
 def readPDF(response):
     st.write(f"URL provided: {response.status_code}")
@@ -59,7 +71,10 @@ def home():
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
         st.write(f"File uploaded: {uploaded_file.name}")
-
+        st.button("Submit")
+        #
+        pdfReader(document_url, uploaded_file)
+        
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
         # Display a confirmation message or handle the URL
@@ -67,6 +82,7 @@ def home():
     if document_url:
         st.write(f"URL provided: {document_url}")
         st.button("Submit")
-
+        #
+        pdfReader(document_url, uploaded_file)
 
 
