@@ -1,5 +1,5 @@
 import streamlit as st
-
+import fitz  # PyMuPDF
 
 def home():
     st.title("Term & Condition")
@@ -33,3 +33,5 @@ def home():
     if document_url:
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
+
+     #
