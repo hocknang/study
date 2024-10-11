@@ -8,6 +8,10 @@ def home():
     # Prompt the user to choose how they'd like to provide the document
     st.write("Would you prefer to upload a file or provide a document URL?")
 
+    #delcare variable
+    uploaded_file = None
+    document_url = ""
+
     # Create a dropdown for the user to select an option
     option = st.selectbox(
         "Choose an option:",
