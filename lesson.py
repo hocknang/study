@@ -68,16 +68,14 @@ def home():
         # Display a confirmation message or handle the URL
         st.write(f"URL provided: {document_url}")
         st.button("Submit")
-
-    # https://eservices.mom.gov.sg/iwork/assets/pdf/EmPOWER%20Terms%20and%20conditions.pdf
-
-    if document_url:
         response = requests.get(document_url)
         readPDF(response)
         pdf_reader = PdfReader(uploaded_file)
+
+    # https://eservices.mom.gov.sg/iwork/assets/pdf/EmPOWER%20Terms%20and%20conditions.pdf
     elif uploaded_file is not None:
         # Working code to read the pdf content
         pdf_reader = PdfReader(uploaded_file)
         readContentPDF(pdf_reader)
-     else:
+    else:
         st.error("Please enter something before pressing Submit!")
