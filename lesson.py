@@ -38,5 +38,5 @@ def home():
 
         if response.status_code == 200: 
             st.write(f"URL provided: {response.status_code}")
-        else
+        else:
             st.write(f"URL provided: {response.status_code} 
