@@ -5,7 +5,7 @@ from io import BytesIO
 from openai import OpenAI
 
 
-def chatbot:
+def chatbot():
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     if "openai_model" not in st.session_state:
