@@ -76,7 +76,7 @@ def home():
         document_url = st.text_input("Please enter the document URL:")
         # Display a confirmation message or handle the URL
 
-    if document_url:
+    if document_url is not None:
         st.write(f"URL provided: {document_url}")
         #
         if st.button("Submit"):
