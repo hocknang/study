@@ -102,6 +102,7 @@ def home():
     # Handle the option selected by the user
     if option == "Upload a file":
         uploaded_file = st.file_uploader("Please upload your file here:", type="pdf")
+        document_url = None
 
     if uploaded_file is not None:
         # Display a confirmation message or handle the uploaded file
@@ -114,6 +115,7 @@ def home():
         # Display a confirmation message or handle the URL
 
     if document_url is not None:
+        uploaded_file = None
         st.write(f"URL provided: {document_url}")
         #
         if st.button("Submit"):
