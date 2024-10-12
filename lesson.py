@@ -41,13 +41,13 @@ def pdfReader(document_url, uploaded_file):
         st.write(f"URL provided: {document_url}")
         response = requests.get(document_url)
         readPDF(response)
-
+        chatbot()
         #
     elif uploaded_file is not None:
         # Working code to read the pdf content
         pdf_reader = PdfReader(uploaded_file)
         readContentPDF(pdf_reader)
-
+        chatbot()
         #
     else:
         st.error("Please enter something before pressing Submit!")
