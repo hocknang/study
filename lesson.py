@@ -53,7 +53,7 @@ def home():
 
     # delcare variable
     uploaded_file = None
-    document_url = ""
+    document_url = None
 
     # Create a dropdown for the user to select an option
     option = st.selectbox(
