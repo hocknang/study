@@ -27,7 +27,8 @@ def readContentPDF(pdf_reader):
     # Display the extracted text
     if pdf_text:
         st.write("### Extracted PDF Text:")
-        st.write(pdf_text)
+       # Working
+       #st.write(pdf_text)
     else:
         st.write("No text could be extracted from the PDF.")
 
@@ -38,7 +39,7 @@ def readPDF(response):
         pdf_reader = PdfReader(pdf_data)
 
         #Working code to read the pdf content
-        readContentPDF(pdf_reader)
+        #readContentPDF(pdf_reader)
 
     else:
         st.write("Not able to read the pdf")
