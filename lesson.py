@@ -32,7 +32,7 @@ def readContentPDF(pdf_reader):
         st.write("No text could be extracted from the PDF.")
 
 def readPDF(response):
-    st.write(f"URL provided: {response.status_code}")
+    #st.write(f"URL provided: {response.status_code}")
     if response.status_code == 200:
         pdf_data = BytesIO(response.content)
         st.write(f"Bytes provided: {pdf_data}")
