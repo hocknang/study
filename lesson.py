@@ -38,7 +38,7 @@ def readPDF(response):
         pdf_reader = PdfReader(pdf_data)
 
         #Working code to read the pdf content
-        #readContentPDF(pdf_reader)
+        readContentPDF(pdf_reader)
 
     else:
         st.write("Not able to read the pdf")
