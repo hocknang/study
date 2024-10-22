@@ -19,11 +19,13 @@ def display_mcq(question, options, key):
 def home():
     # Define your questions and options
     questions = {
-        "Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners", "Both A and C"],
-        "What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": ["3 years", "5 years", "1 year", "No MOP required"],
-        "Which of the following is NOT allowed to rent the flat?": ["Singapore Citizens", "Non-Malaysian Work Permit holders from the Construction sector", "Singapore Permanent Residents", "Students on a Student Pass"],
-	"How long must a tenant occupy the flat before they can be replaced by a new occupier?": ["3 months", "6 months", "12 months", "24 months"],
-	"What is the maximum period for renting out a flat per application?": ["12 months", "24 months", "36 months", "48 months"],
+        "1. Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners", "Both A and C"],
+        "2. What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": ["3 years", "5 years", "1 year", "No MOP required"],
+        "3. Which of the following is NOT allowed to rent the flat?": ["Singapore Citizens", "Non-Malaysian Work Permit holders from the Construction sector", "Singapore Permanent Residents", "Students on a Student Pass"],
+	"4. How long must a tenant occupy the flat before they can be replaced by a new occupier?": ["3 months", "6 months", "12 months", "24 months"],
+	"5. What is the maximum period for renting out a flat per application?": ["12 months", "24 months", "36 months", "48 months"],
+	"6. If the flat owner is overseas during the rental period, what is required?": ["No additional action needed", "A certified copy of the Power of Attorney", "Notification to HDB", "All of the above"],
+	"7. What is the consequence of renting out the flat without HDB's approval?": ["The rental agreement is void", "HDB may take action to repossess the flat", "Notification to HDB", "The flat owner receives a warning"],
 	
     }
 
