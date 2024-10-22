@@ -23,18 +23,19 @@ def home():
         "Which planet is known as the Red Planet?": ["Earth", "Mars", "Jupiter", "Saturn"],
     }
 
+    # Define correct answers
+    correct_answers = ["Paris", "4", "Mars"]
+
     # Initialize score
     score = 0
-    correct_answers = ["Paris", "4", "Mars"]  # List of correct answers
+    answers = []
 
     # Display questions
     for question, options in questions.items():
         answer = display_mcq(question, options)
-        # Check if the selected answer is correct
-        if answer == correct_answers[list(questions.keys()).index(question)]:
-            score += 1
+        answers.append(answer)
 
-    # Show the Result
+    # Submit button
     if st.button("Submit"):
         # Calculate score
         for i, question in enumerate(questions.keys()):
@@ -45,4 +46,3 @@ def home():
         st.write(f"You scored **{score} out of {len(questions)}!**")
         for i, question in enumerate(questions.keys()):
             st.write(f"- {question}: Your answer: {answers[i]}, Correct answer: {correct_answers[i]}")
-
