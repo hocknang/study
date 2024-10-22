@@ -7,27 +7,21 @@ def display_mcq(question, options, key):
     Parameters:
     - question (str): The question to be displayed.
     - options (list): List of answer options.
+    - key (str): Unique key for the radio element.
 
     Returns:
     - str: The selected option.
     """
     st.write(question)
-    selected_option = st.radio("Choose an option:", options,  key=key)
+    selected_option = st.radio("Choose an option:", options, key=key)
     return selected_option
 
 def home():
     # Define your questions and options
     questions = {
-        "Who is eligible to rent out their flat?": ["Berlin", "Madrid", "Paris", "Lisbon"],
-        "What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": ["3", "4", "5", "6"],
-        "Which of the following is NOT allowed to rent the flat?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"How long must a tenant occupy the flat before they can be replaced by a new occupier?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"What is the maximum period for renting out a flat per application?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"If the flat owner is overseas during the rental period, what is required?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"What is the consequence of renting out the flat without HDB's approval?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"How many persons can live in a 3-room flat?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"What happens if a non-citizen tenant's permission to remain in Singapore is revoked?": ["Earth", "Mars", "Jupiter", "Saturn"],
-	"How much is the administrative fee for each rental application":  ["Earth", "Mars", "Jupiter", "Saturn"],
+        "What is the capital of France?": ["Berlin", "Madrid", "Paris", "Lisbon"],
+        "What is 2 + 2?": ["3", "4", "5", "6"],
+        "Which planet is known as the Red Planet?": ["Earth", "Mars", "Jupiter", "Saturn"],
     }
 
     # Define correct answers
@@ -37,9 +31,8 @@ def home():
     score = 0
     answers = []
 
-    # Display questions
-    for question, options in questions.items():
-	st.write(f"mcq_{i}")
+    # Display questions with unique keys
+    for i, (question, options) in enumerate(questions.items()):
         answer = display_mcq(question, options, key=f"mcq_{i}")
         answers.append(answer)
 
