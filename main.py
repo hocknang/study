@@ -1,13 +1,18 @@
 import streamlit as st
 import lesson as lesson
+import learn as learn
 
 #Define the pages: 
 def page_home():
     lesson.home()
 
+def page_learn():
+    learn.home()
+    
 # Create a dictionary of pages
 pages = {
     "Explorer Chatbots": page_home,
+    "Testing Chatbots" : page_learn
 }
 
 # Add a sidebar for navigation
