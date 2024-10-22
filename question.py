@@ -32,7 +32,7 @@ def home():
     }
 
     # Define correct answers
-    correct_answers = ["Paris", "4", "Mars"]
+    correct_answers = ["Singapore Citizens", "3 years", "Non-Malaysian Work Permit holders from the Construction sector", "6 months", "36 months", "A certified copy of the Power of Attorney", "HDB may take action to repossess the flat", "6", "HDB's consent to rent is automatically revoked", "$18"]
 
     # Initialize score
     score = 0
