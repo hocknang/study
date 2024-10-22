@@ -55,4 +55,4 @@ def home():
         for i, question in enumerate(questions.keys()):
             st.write({question}:
             st.write(Your answer: {answers[i]})
-	    st.write(Correct answer: {correct_answers[i]}")
+	    st.write(Correct answer: ")
