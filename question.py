@@ -54,5 +54,5 @@ def home():
         st.write(f"You scored **{score} out of {len(questions)}!**")
         for i, question in enumerate(questions.keys()):
             st.write({question}:
-            st.write(Your answer: {answers[i]}})
+            st.write(Your answer: {answers[i]})
 	    st.write(Correct answer: {correct_answers[i]}")
