@@ -26,7 +26,9 @@ def home():
 	"5. What is the maximum period for renting out a flat per application?": ["12 months", "24 months", "36 months", "48 months"],
 	"6. If the flat owner is overseas during the rental period, what is required?": ["No additional action needed", "A certified copy of the Power of Attorney", "Notification to HDB", "All of the above"],
 	"7. What is the consequence of renting out the flat without HDB's approval?": ["The rental agreement is void", "HDB may take action to repossess the flat", "Notification to HDB", "The flat owner receives a warning"],
-	
+	"8. How many persons can live in a 3-room flat?": ["4", "6", "8", "10"],
+	"9. What happens if a non-citizen tenant's permission to remain in Singapore is revoked": ["The flat owner can keep renting", "HDB's consent to rent is automatically revoked", "The flat owner must inform the tenant", "Nothing happens"],
+	"10. How much is the administrative fee for each rental application?": ["$10", "$18", "$50", "$100"],
     }
 
     # Define correct answers
