@@ -19,7 +19,7 @@ def display_mcq(question, options, key):
 def home():
     # Define your questions and options
     questions = {
-        "What is the capital of France?": ["Berlin", "Madrid", "Paris", "Lisbon"],
+        "Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners", "Both A and C"],
         "What is 2 + 2?": ["3", "4", "5", "6"],
         "Which planet is known as the Red Planet?": ["Earth", "Mars", "Jupiter", "Saturn"],
     }
