@@ -21,7 +21,7 @@ def home():
     questions = {
         "Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners", "Both A and C"],
         "What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": ["3 years", "5 years", "1 year", "No MOP required"],
-        "Which planet is known as the Red Planet?": ["Earth", "Mars", "Jupiter", "Saturn"],
+        "Which of the following is NOT allowed to rent the flat?": ["Singapore Citizens", "Non-Malaysian Work Permit holders from the Construction sector", "Singapore Permanent Residents", "Students on a Student Pass"],
     }
 
     # Define correct answers
