@@ -17,6 +17,7 @@ questions = {
 score = 0
 
 # Display questions
+def home():
 for question, options in questions.items():
     answer = display_mcq(question, options)
     if answer == options[2]:  # Assuming the correct answer is always the third option
