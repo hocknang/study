@@ -20,7 +20,7 @@ def home():
     # Define your questions and options
     questions = {
         "Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners", "Both A and C"],
-        "What is 2 + 2?": ["3", "4", "5", "6"],
+        "What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": ["3 years", "5 years", "1 year", "No MOP required"],
         "Which planet is known as the Red Planet?": ["Earth", "Mars", "Jupiter", "Saturn"],
     }
 
