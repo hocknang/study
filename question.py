@@ -47,3 +47,6 @@ def home():
         answer = display_mcq(question, options, key=f"mcq_{i}")
         #st.write(f"**Answer:** {answer}")
         answers.append(answer)
+
+        st.button("Reset", type="primary")
+        if st.button("Say hello"):
