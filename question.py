@@ -67,6 +67,7 @@ def home():
 
     if st.button("Submit"):
         for i, key in enumerate(my_dict):
+            i +=1
             if correct_answers[i] == my_dict[key]:
                 score += 1
                 st.write(f"{i}: Correct! 🎉 The answer is {correct_answers[i]}.")
