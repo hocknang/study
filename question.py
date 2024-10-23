@@ -2,6 +2,23 @@ import streamlit as st
 
 my_dict = {}
 
+def display_mcq(question, options, key):
+    """
+    Displays a multiple-choice question and returns the selected option.
+
+    Parameters:
+    - question (str): The question to be displayed.
+    - options (list): List of answer options.
+    - key (str): Unique key for the radio element.
+
+    Returns:
+    - str: The selected option.
+    """
+    st.write(question)
+    selected_option = st.radio("Choose an option:", options, key=key)
+    my_dict[key] = selected_option
+    return selected_option
+
 def home():
     # Define your questions and options
     questions = {
