@@ -45,7 +45,7 @@ def home():
     # Display questions with unique keys
     for i, (question, options) in enumerate(questions.items()):
         answer = display_mcq(question, options, key=f"mcq_{i}")
-        st.write(f"**Answer:** {answer}")
+        #st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
         if st.button("Submit"):
