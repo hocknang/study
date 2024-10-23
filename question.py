@@ -14,6 +14,8 @@ def display_mcq(question, options, key):
     """
     st.write(question)
     selected_option = st.radio("Choose an option:", options, key=key)
+    st.write(f"**Key:** {key}")
+    st.write(f"**Key:** {selected_option}")
     return selected_option
 
 def home():
@@ -37,6 +39,7 @@ def home():
     # Initialize score
     score = 0
     answers = []
+
 
     # Display questions with unique keys
     for i, (question, options) in enumerate(questions.items()):
