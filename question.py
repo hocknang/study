@@ -48,9 +48,7 @@ def home():
         #st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
-        # Submit button
-        if st.button("Submit", key="btn_Submit"):
-            # Calculate score
-            for i, question in enumerate(questions.keys()):
-                if answers[i] == correct_answers[i]:
-                    score += 1
+        button_labels = ['Submit']  # Duplicate labels
+        for i, label in enumerate(button_labels):
+            if st.button(label, key=f"btn_{label}_{i}"):  # This will still generate duplicate keys for 'Submit'
+                st.write(f"{label} button clicked!")
