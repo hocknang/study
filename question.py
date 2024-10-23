@@ -74,7 +74,7 @@ def home():
             else:
                 st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected " + my_dict[key] + ".")
 
-        st.write("i: " + i);
+        st.write("i: " + str(i))
         i = i + 1
                 # Display the final score
 
