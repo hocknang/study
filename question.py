@@ -41,17 +41,5 @@ def home():
     # Display questions with unique keys
     for i, (question, options) in enumerate(questions.items()):
         answer = display_mcq(question, options, key=f"mcq_{i}")
+        st.write(f"**Answer:** {answer}")
         answers.append(answer)
-
-    # Submit button
-    if st.button("Submit"):
-        # Calculate score
-        for i, question in enumerate(questions.keys()):
-            if answers[i] == correct_answers[i]:
-                score += 1
-
-        # Show results
-        st.write(f"You scored **{score} out of {len(questions)}!**")
-        for i, question in enumerate(questions.keys()):
-            st.write(f"**Question:** {question }")
-            st.write(f"**Answer:** {answer[i]}")
