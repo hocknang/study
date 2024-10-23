@@ -47,6 +47,3 @@ def home():
         answer = display_mcq(question, options, key=f"mcq_{i}")
         #st.write(f"**Answer:** {answer}")
         answers.append(answer)
-
-        if st.button('Click Me'):
-            st.write("Button clicked!")
