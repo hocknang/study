@@ -65,7 +65,15 @@ def home():
         # st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
+    i = 0;
+
     if st.button("Submit"):
         for key in my_dict:
-            ...
-            st.write(key, "->", my_dict[key])
+            if correct_answers[i] == my_dict[key]:
+                score += 1
+                st.write(f"Q{i + 1}: Correct! 🎉 The answer is {q['answer']}.")
+            else:
+                st.write(f"Q{i + 1}: Wrong! 😞 The correct answer is {q['answer']}. You selected {user_answers[i]}.")
+
+                # Display the final score
+            st.write(f"Your final score is: {score}/{len(my_dict)}")
