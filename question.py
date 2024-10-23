@@ -68,4 +68,4 @@ def home():
     if st.button("Submit"):
         for key in my_dict:
             ...
-            print(key, "->", my_dict[key])
+            st.write(key, "->", my_dict[key])
