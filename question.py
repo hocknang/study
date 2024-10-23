@@ -66,4 +66,6 @@ def home():
         answers.append(answer)
 
     if st.button("Submit"):
-       st.write("hello world")
+        for key in my_dict:
+            ...
+            print(key, "->", my_dict[key])
