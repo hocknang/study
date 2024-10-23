@@ -65,7 +65,7 @@ def home():
         # st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
-    i = i;
+    i = 0;
 
     if st.button("Submit"):
         for key in my_dict:
@@ -73,8 +73,8 @@ def home():
                 score += 1
                 st.write(f"{i}: Correct! 🎉 The answer is {correct_answers[i]}.")
             else:
-                st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected" + my_dict[key] + ".")
-
+                st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected " + my_dict[key] + ".")
+        i = i + 1
                 # Display the final score
-        i= i +1
+
         st.write(f"Your final score is: {score}/{len(my_dict)}")
