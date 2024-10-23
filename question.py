@@ -60,12 +60,12 @@ def home():
     # Initialize score
     score = 0
     answers = []
-    i = 0
     for i, (question, options) in enumerate(questions.items()):
         answer = display_mcq(question, options, key=f"mcq_{i}")
         # st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
+    i = 0
     if st.button("Submit"):
         for key in my_dict:
             st.write("i: " + str(i))
