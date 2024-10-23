@@ -61,11 +61,6 @@ def home():
     score = 0
     answers = []
 
-    # Display questions with unique keys
-    for i, (question, options) in enumerate(questions.items()):
-        answer = display_mcq(question, options, key=f"mcq_{i}")
-        # st.write(f"**Answer:** {answer}")
-        answers.append(answer)
 
         st.button("Reset", type="primary")
         if st.button("Say hello"):
