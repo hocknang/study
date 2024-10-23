@@ -68,14 +68,16 @@ def home():
 
     if st.button("Submit"):
         for key in my_dict:
+
             if correct_answers[i] == my_dict[key]:
                 score += 1
                 st.write(f"{i}: Correct! 🎉 The answer is {correct_answers[i]}.")
             else:
                 st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected " + my_dict[key] + ".")
-
+            i = i + 1
         st.write("i: " + str(i))
-        i = i + 1
+
+
                 # Display the final score
 
         st.write(f"Your final score is: {score}/{len(my_dict)}")
