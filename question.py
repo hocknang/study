@@ -1,5 +1,7 @@
 import streamlit as st
 
+my_dict = {}
+
 def display_mcq(question, options, key):
     """
     Displays a multiple-choice question and returns the selected option.
@@ -14,8 +16,7 @@ def display_mcq(question, options, key):
     """
     st.write(question)
     selected_option = st.radio("Choose an option:", options, key=key)
-    st.write(f"**Key:** {key}")
-    st.write(f"**Key:** {selected_option}")
+    my_dict[key] = selected_option
     return selected_option
 
 def home():
@@ -46,3 +47,6 @@ def home():
         answer = display_mcq(question, options, key=f"mcq_{i}")
         st.write(f"**Answer:** {answer}")
         answers.append(answer)
+
+        if st.button("Submit"):
+            st.write("Length: " + len(my_dict))
