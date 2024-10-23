@@ -62,6 +62,6 @@ def home():
     answers = []
 
 
-        st.button("Reset", type="primary")
-        if st.button("Say hello"):
-            print("hello world")
+    st.button("Reset", type="primary")
+    if st.button("Say hello"):
+    print("hello world")
