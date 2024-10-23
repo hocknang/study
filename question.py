@@ -60,12 +60,11 @@ def home():
     # Initialize score
     score = 0
     answers = []
+    i = 0
     for i, (question, options) in enumerate(questions.items()):
         answer = display_mcq(question, options, key=f"mcq_{i}")
         # st.write(f"**Answer:** {answer}")
         answers.append(answer)
-
-    i = 0;
 
     if st.button("Submit"):
         for key in my_dict:
@@ -74,6 +73,8 @@ def home():
                 st.write(f"{i}: Correct! 🎉 The answer is {correct_answers[i]}.")
             else:
                 st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected " + my_dict[key] + ".")
+
+        st.write("i: " + i);
         i = i + 1
                 # Display the final score
 
