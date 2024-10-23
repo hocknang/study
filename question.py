@@ -60,8 +60,10 @@ def home():
     # Initialize score
     score = 0
     answers = []
+    for i, (question, options) in enumerate(questions.items()):
+        answer = display_mcq(question, options, key=f"mcq_{i}")
+        # st.write(f"**Answer:** {answer}")
+        answers.append(answer)
 
-
-    st.button("Reset", type="primary")
     if st.button("Say hello"):
         st.write("hello world")
