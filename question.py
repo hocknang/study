@@ -67,11 +67,11 @@ def home():
 
     if st.button("Submit"):
         for i, key in enumerate(my_dict):
-            st.write("i: " + str(i))
+            
             if correct_answers[i] == my_dict[key]:
                 score += 1
                 st.write(f"{i}: Correct! 🎉 The answer is {correct_answers[i]}.")
             else:
                 st.write(f"{i}: Wrong! 😞 The correct answer is {correct_answers[i]}. You selected " + my_dict[key] + ".")
-                
+
         st.write(f"Your final score is: {score}/{len(my_dict)}")
