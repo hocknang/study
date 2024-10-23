@@ -64,4 +64,4 @@ def home():
 
     st.button("Reset", type="primary")
     if st.button("Say hello"):
-        print("hello world")
+        st.write("hello world")
