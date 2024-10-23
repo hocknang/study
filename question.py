@@ -1,6 +1,5 @@
 import streamlit as st
 
 def home():
-    st.button("Reset", type="primary")
-    if st.button("Say hello"):
+    if st.button("Submit"):
        st.write("hello world")
