@@ -65,5 +65,5 @@ def home():
         # st.write(f"**Answer:** {answer}")
         answers.append(answer)
 
-    if st.button("Say hello"):
-        st.write("hello world")
+    if st.button("Submit"):
+       st.write("hello world")
