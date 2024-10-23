@@ -49,7 +49,7 @@ def home():
         answers.append(answer)
 
         # Submit button
-        if st.button("Submit", key="btnSubmit"):
+        if st.button("Submit", key="btn_Submit"):
             # Calculate score
             for i, question in enumerate(questions.keys()):
                 if answers[i] == correct_answers[i]:
