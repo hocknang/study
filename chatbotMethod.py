@@ -23,6 +23,7 @@ def home(pdf_text):
     if prompt := st.chat_input("What is up?"):
         # Append user message to session state
         st.session_state.messages.append({"role": "user", "content": prompt})
+        st.write("hello world")
 
         # Display the user message immediately in the chat
         with st.chat_message("user"):
