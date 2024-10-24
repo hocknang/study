@@ -121,7 +121,7 @@ def home():
     isReadingFile = True
 
     if pdf_text_File is not None:
-        st.session_state['condition'] = True
+        st.session_state.condition = True
         st.write("Hit")
         st.session_state.pdf_content = pdf_text_File
 
