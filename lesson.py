@@ -143,7 +143,7 @@ def home():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    isReadingFile = bool(st.session_state.condition)
+    isReadingFile = bool(st.session_state.isReadingFile)
 
     st.write(str(isReadingFile) + "Nice Hit")
 
