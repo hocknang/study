@@ -37,7 +37,7 @@ def home():
                                                                     "C) They must perform manual work more than half their working time.",
                                                                     "D) They must be paid on a monthly basis."],
 
-        f"Which of the following best describes the term {columnName} in the context of the Employment Act": [
+        f"Which of the following best describes the term **{columnName}** in the context of the Employment Act": [
             "A) It includes all bonuses and allowances.",
             "B) It includes overtime payments and annual wage supplements.",
             "C) It is the fixed amount earned before deductions and excludes bonuses and allowances.",
