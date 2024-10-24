@@ -15,13 +15,15 @@ def page_question():
     
 # Create a dictionary of pages
 pages = {
-    "Explorer Chatbots": page_home,
-    "Testing Chatbots" : page_learn,
+    "Explorer Chatbots (Read from File)": page_home,
+    "Testing Chatbots (Retrieving From Internet)" : page_learn,
     "Knowledge & Understanding (MCQ)" : page_question 
 }
 
 # Add a sidebar for navigation
 st.sidebar.title("Navigation")
+#Clear the Text Message
+st.session_state.messages = []
 selection = st.sidebar.radio("Go to", list(pages.keys()))
 
 # Display the selected page
