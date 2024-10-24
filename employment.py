@@ -22,10 +22,12 @@ def display_mcq(question, options, key):
 def home():
     # Define your questions and options
     questions = {
-        "Who is eligible to rent out their flat?": ["Singapore Permanent Residents", "Singapore Citizens", "Foreigners",
-                                                    "Both A and C"],
-        "What is the Minimum Occupation Period (MOP) for a non-subsidised flat purchased before 30 Aug 2010?": [
-            "3 years", "5 years", "1 year", "No MOP required"],
+        "Under the Employment Act, which of the following categories of employees is explicitly excluded from Part IV provisions regarding rest days and hours of work?":
+            ["A) Employees earning less than $2,600", "B) Workmen earning less than $4,500", "C) Managers and executives regardless of salary",
+                                                    "D) Full-time employees with fixed-term contracts"],
+        "Which of the following statements regarding coverage under the Employment Act is FALSE?": [
+            "A) All local employees are covered under the Act.", "B) Foreign employees holding work passes are covered under the Employment of Foreign Manpower Act.",
+            "C) Part-time employees are covered under the Employment Act if they meet specific criteria.", "D) Domestic workers are fully covered by the Employment Act."],
         "Which of the following is NOT allowed to rent the flat?": ["Singapore Citizens",
                                                                     "Non-Malaysian Work Permit holders from the Construction sector",
                                                                     "Singapore Permanent Residents",
