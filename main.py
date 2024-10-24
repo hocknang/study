@@ -9,7 +9,7 @@ def page_home():
     lesson.init()
 
 def page_learn():
-    learn.home()
+    learn.init()
 
 def page_question():
     question.home()
