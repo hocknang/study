@@ -6,6 +6,9 @@ from openai import OpenAI
 
 pdf_text = None
 
+def chatbot():
+    st.write("hello world")
+
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
         st.write(f"URL provided: {document_url}")
@@ -32,7 +35,9 @@ def readContentPDF(pdf_reader):
     # Display the extracted text
     if pdf_text:
         st.write("### Extracted PDF Text:")
-        st.write(pdf_text)
+        #Working
+        #st.write(pdf_text)
+        chatbot()
     else:
         st.write("No text could be extracted from the PDF.")
 
