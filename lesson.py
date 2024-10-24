@@ -61,6 +61,7 @@ def home():
     document_url = None
 
     pdf_text_File = None
+    pdf_text_Url = None
 
     # Create a dropdown for the user to select an option
     option = st.selectbox(
@@ -91,8 +92,11 @@ def home():
         if st.button("Submit"):
             pdfReader(document_url, uploaded_file)
 
-    st.write("hello world")
     st.write('pdf Text File: ' + str(pdf_text_File))
+
+    if pdf_text_File is not None:
+        st.write("Ya i Found you")
+
 
     #LLM Chatbot (General)
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
