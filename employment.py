@@ -83,12 +83,16 @@ def home():
     }
 
     # Define correct answers
-    correct_answers = ["C) Managers and executives regardless of salary", "D) Domestic workers are fully covered by the Employment Act",
-                       "C) They must perform manual work more than half their working time.", "C) It is the fixed amount earned before deductions and excludes bonuses and allowances.",
+    correct_answers = ["C) Managers and executives regardless of salary",
+                       "D) Domestic workers are fully covered by the Employment Act",
+                       "C) They must perform manual work more than half their working time.",
+                       "C) It is the fixed amount earned before deductions and excludes bonuses and allowances.",
                        "D) A project manager with specialized knowledge in construction.",
                        "B) It sets out best practices for employers in managing term contract employees.",
-                       "B) Foreign employees are covered under the Employment of Foreign Manpower Act only.", "B) They are exempt from Part IV provisions.",
-                       ": C) An individual responsible for formulating strategies and making significant operational decisions.", "$18"]
+                       "B) Foreign employees are covered under the Employment of Foreign Manpower Act only.",
+                       "B) They are exempt from Part IV provisions.",
+                       "B) They are classified as a part-time employee.",
+                       "C) An individual responsible for formulating strategies and making significant operational decisions."]
 
     # Initialize score
     score = 0
