@@ -58,8 +58,8 @@ def home():
                 "Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output." \
                 "Always consult with qualified professionals for accurate and personalized advice."
 
-    with st.expander("Show Extracted Text from PDF"):
-        st.text_area("PDF Content", value="", height=100)
+    with st.expander("Disclaimer on the main page of your application"):
+        st.text_area("PDF Content", value=condition, height=100)
 
     # Prompt the user to choose how they'd like to provide the document
     st.write("Would you prefer to upload a file or provide a document URL?")
