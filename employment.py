@@ -50,6 +50,11 @@ def home():
             "C) A bus driver who operates a commercial vehicle.",
             "D) A project manager with specialized knowledge in construction."],
 
+        "What is the significance of the Tripartite Advisory on Employment of Term Contract Employees in relation to the Employment Act?": [
+            "A) It provides legal protections to all contract employees.",
+            "B) It sets out best practices for employers in managing term contract employees.",
+            "C) It allows employers to bypass the Employment Act for contract employees.",
+            "D) It specifically applies to foreign employees holding work passes."],
 
     }
 
