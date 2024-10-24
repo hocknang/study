@@ -118,8 +118,6 @@ def home():
 
     st.session_state.condition = False
 
-    isReadingFile = True
-
     if pdf_text_File is not None:
         st.session_state.condition = True
         st.write("Hit")
@@ -144,7 +142,7 @@ def home():
     st.write(str(st.session_state.condition) + "Nice Hit")
 
     if prompt := st.chat_input("What is up?"):
-        if isReadingFile:
+        if st.session_state.condition:
             st.write("Hit 2")
             combined_content = (
                 f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
