@@ -147,6 +147,7 @@ def home():
                 f"User question: {prompt}\n"
             )
         else:
+            st.write("MISS")
             combined_content = (
                 f"User question: {prompt}\n"
             )
