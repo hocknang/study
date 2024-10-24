@@ -92,7 +92,7 @@ def home():
         if st.button("Submit"):
             pdfReader(document_url, uploaded_file)
 
-    st.write('pdf Text File: ' + str(pdf_text_File))
+    #st.write('pdf Text File: ' + str(pdf_text_File))
 
     if pdf_text_File is not None:
         st.session_state.pdf_content = pdf_text_File
@@ -112,10 +112,11 @@ def home():
             st.markdown(message["content"])
 
     if prompt := st.chat_input("What is up?"):
-        combined_content = (
-            f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
-            f"User question: {prompt}\n"
-        )
+        if pdf_text_File is not None:
+            combined_content = (
+                f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
+                f"User question: {prompt}\n"
+            )
         st.session_state.messages.append({"role": "user", "content": combined_content})
         with st.chat_message("user"):
             st.markdown(prompt)
