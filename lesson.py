@@ -8,6 +8,7 @@ pdf_text = None
 
 def chatbot():
     st.write("hello world")
+    st.write(pdf_text)
 
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
