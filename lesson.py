@@ -3,11 +3,12 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from openai import OpenAI
+import chatbotMethod as chatbotMethod
 
 
 def chatbot(pdf_text):
     #working
-    #st.write(pdf_text)
+    chatbotMethod.home()
 
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
