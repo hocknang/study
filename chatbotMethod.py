@@ -5,7 +5,7 @@ from openai import OpenAI
 def home(pdf_text):
     #st.write(pdf_text)
 
-    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     # Initialize session state for model and messages
     if "openai_model" not in st.session_state:
