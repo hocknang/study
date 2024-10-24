@@ -30,7 +30,7 @@ def readContentPDF(pdf_reader):
 
     # Display the extracted text
     if pdf_text:
-        st.write("### Extracted PDF Text:")
+        st.write("### Extracted PDF Text (Document Had been Uploaded Successfully (Please start to enter your question):")
         #Working
         #st.write(pdf_text)
         return pdf_text
@@ -74,6 +74,7 @@ def home():
 
     # Prompt the user to choose how they'd like to provide the document
     st.write("Would you prefer to upload a file or provide a document URL?")
+    st.info('This Explore ChatBot Current It only Support PDF Document Only, Aplogise for the Inconvience we will try to support More document format in our next release', icon="ℹ️")
 
     # delcare variable
     uploaded_file = None
