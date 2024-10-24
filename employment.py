@@ -56,6 +56,12 @@ def home():
             "C) It allows employers to bypass the Employment Act for contract employees.",
             "D) It specifically applies to foreign employees holding work passes."],
 
+        "Which of the following statements regarding the Employment Act's provisions for foreign employees is TRUE?": [
+            "A) All foreign employees are covered under the Employment Act.",
+            "B) Foreign employees are covered under the Employment of Foreign Manpower Act only.",
+            "C) Foreign employees with work passes are exempt from any employment regulations.",
+            "D) Foreign employees are entitled to the same benefits as local employees under the Employment Act."],
+
     }
 
     # Define correct answers
