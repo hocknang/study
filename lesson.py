@@ -1,3 +1,5 @@
+import string
+
 import requests
 import streamlit as st
 from PyPDF2 import PdfReader
@@ -8,12 +10,12 @@ def pdfReader(document_url, uploaded_file):
     if document_url is not None:
         st.write(f"URL provided: {document_url}")
         response = requests.get(document_url)
-        readPDF(response)
+        return readPDF(response)
         #
     elif uploaded_file is not None:
         # Working code to read the pdf content
         pdf_reader = PdfReader(uploaded_file)
-        readContentPDF(pdf_reader)
+        return readContentPDF(pdf_reader)
     else:
         st.error("Please enter something before pressing Submit!")
 
@@ -31,6 +33,7 @@ def readContentPDF(pdf_reader):
         st.write("### Extracted PDF Text:")
         #Working
         #st.write(pdf_text)
+        return pdf_text
     else:
         st.write("No text could be extracted from the PDF.")
 
@@ -41,7 +44,7 @@ def readPDF(response):
         pdf_reader = PdfReader(pdf_data)
 
         #Working code to read the pdf content
-        #readContentPDF(pdf_reader)
+        return readContentPDF(pdf_reader)
 
     else:
         st.write("Not able to read the pdf")
@@ -56,6 +59,8 @@ def home():
     # delcare variable
     uploaded_file = None
     document_url = None
+
+    pdf_text_File = None
 
     # Create a dropdown for the user to select an option
     option = st.selectbox(
@@ -73,7 +78,7 @@ def home():
         # Display a confirmation message or handle the uploaded file
         st.write(f"File uploaded: {uploaded_file.name}")
         if st.button("Submit"):
-            pdfReader(document_url, uploaded_file)
+            pdf_text_File = pdfReader(document_url, uploaded_file)
 
     elif option == "Provide a document URL":
         document_url = st.text_input("Please enter the document URL:")
@@ -85,6 +90,9 @@ def home():
         #
         if st.button("Submit"):
             pdfReader(document_url, uploaded_file)
+
+    st.write("hello world")
+    st.write(pdf_text_File)
 
     #LLM Chatbot (General)
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
