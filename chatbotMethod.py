@@ -15,5 +15,6 @@ def home(pdf_text):
     #st.write(pdf_text)
 
     # React to user input
-    if prompt := st.chat_input("What is up?"):
-        st.write(prompt)
+    prompt = st.chat_input("Say something")
+    if prompt:
+        st.write(f"User has sent the following prompt: {prompt}")
