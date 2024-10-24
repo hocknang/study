@@ -15,7 +15,7 @@ def page_question():
     
 # Create a dictionary of pages
 pages = {
-    "Explorer Chatbots (Read from File)": page_home,
+    "Explorer Chatbots (Retrieving from File Or Url)": page_home,
     "Testing Chatbots (Retrieving From Internet)" : page_learn,
     "Knowledge & Understanding (MCQ)" : page_question 
 }
