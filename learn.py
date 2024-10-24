@@ -1,6 +1,17 @@
 import streamlit as st
 from openai import OpenAI
 
+def init():
+    st.write("Please enter your password:")
+
+    password = st.text_input("Password", type="password")
+
+    if st.secrets["PASSWORD"] == password:
+        st.success("Valid Credential")
+        home()
+    else:
+        st.error("Invalid Credential")
+
 def home():
      st.title("Chatbot Learning")
 

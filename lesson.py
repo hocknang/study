@@ -55,7 +55,8 @@ def init():
     password = st.text_input("Password", type="password")
 
     if st.secrets["PASSWORD"] == password:
-        st.success("Hello world")
+        st.success("Valid Credential")
+        home()
     else:
         st.error("Invalid Password")
 
