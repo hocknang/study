@@ -92,7 +92,7 @@ def home():
             pdfReader(document_url, uploaded_file)
 
     st.write("hello world")
-    st.write('pdf Text File: ' + pdf_text_File)
+    st.write('pdf Text File: ' + str(pdf_text_File))
 
     #LLM Chatbot (General)
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
