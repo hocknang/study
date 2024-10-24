@@ -5,7 +5,7 @@ import question as question
 
 #Define the pages: 
 def page_home():
-    lesson.chatbot("")
+    lesson.home()
 
 def page_learn():
     learn.home()
