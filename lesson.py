@@ -54,6 +54,11 @@ def init():
 
     password = st.text_input("Password", type="password")
 
+    if st.secrets["PASSWORD"] == password:
+        st.success("Hello world")
+    else:
+        st.fail("Invalid Password")
+
 def home():
 
     st.title("Term & Condition")
