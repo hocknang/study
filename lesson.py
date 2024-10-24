@@ -4,6 +4,7 @@ from PyPDF2 import PdfReader
 from io import BytesIO
 from openai import OpenAI
 
+pdf_text = None
 
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
@@ -25,13 +26,13 @@ def readContentPDF(pdf_reader):
     pdf_text = ""
     for page_num in range(len(pdf_reader.pages)):
         page = pdf_reader.pages[page_num]
+        #this is what i need
         pdf_text += page.extract_text()  # Extract text from the page
 
     # Display the extracted text
     if pdf_text:
         st.write("### Extracted PDF Text:")
-       # Working
-       #st.write(pdf_text)
+        st.write(pdf_text)
     else:
         st.write("No text could be extracted from the PDF.")
 
