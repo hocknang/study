@@ -8,7 +8,7 @@ import chatbotMethod as chatbotMethod
 
 def chatbot(pdf_text):
     #working
-    chatbotMethod.home()
+    chatbotMethod.home(pdf_text)
 
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
