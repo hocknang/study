@@ -22,6 +22,7 @@ def display_mcq(question, options, key):
 def home():
     # Define your questions and options
     columnName = "basic salary"
+    columnName1 = "workman"
 
     questions = {
         "Under the Employment Act, which of the following categories of employees is explicitly excluded from Part IV provisions regarding rest days and hours of work?":
@@ -42,6 +43,12 @@ def home():
             "B) It includes overtime payments and annual wage supplements.",
             "C) It is the fixed amount earned before deductions and excludes bonuses and allowances.",
             "D) They must be paid on a monthly basis."],
+
+        f"Which of the following employees would NOT be considered a **{columnName1}** under the Employment Act?": [
+            "A) A construction worker who primarily performs manual labour.",
+            "B) A supervisor who spends 60% of their time supervising and 40% performing manual tasks.",
+            "C) A bus driver who operates a commercial vehicle.",
+            "D) A project manager with specialized knowledge in construction."],
 
 
     }
