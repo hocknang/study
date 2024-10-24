@@ -62,6 +62,18 @@ def home():
             "C) Foreign employees with work passes are exempt from any employment regulations.",
             "D) Foreign employees are entitled to the same benefits as local employees under the Employment Act."],
 
+        "An employee earning a basic salary of $2,800 and holding a managerial position is seeking to understand their rights under Part IV of the Employment Act. What is the likely outcome?": [
+            "A) They are fully covered under Part IV provisions.",
+            "B) They are exempt from Part IV provisions.",
+            "C) They are only partially covered under Part IV provisions.",
+            "D) Their rights are entirely determined by their employment contract."],
+
+        "If an employee works less than 35 hours a week but earns a monthly salary of $3,000, how are they classified under the Employment Act?": [
+            "A) They are considered a full-time employee.",
+            "B) They are classified as a part-time employee.",
+            "C) Their classification depends on the nature of their employment contract.",
+            "D) They are exempt from the Employment Act."],
+
     }
 
     # Define correct answers
