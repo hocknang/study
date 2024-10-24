@@ -116,7 +116,7 @@ def home():
 
     #st.write("pdf URL Text: " + str(pdf_text_Url))
 
-    st.session_state['condition'] = False
+    st.session_state.condition = False
 
     isReadingFile = True
 
@@ -140,6 +140,8 @@ def home():
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
+
+    st.write(str(st.session_state.condition) + "Nice Hit")
 
     if prompt := st.chat_input("What is up?"):
         if isReadingFile:
