@@ -10,4 +10,4 @@ def home():
      if prompt:
           st.write(f"User has sent the following prompt: {prompt}")
 
-     st.write(st.secrets["DB_PASSWORD"])
+     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
