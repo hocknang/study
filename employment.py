@@ -74,6 +74,11 @@ def home():
             "C) Their classification depends on the nature of their employment contract.",
             "D) They are exempt from the Employment Act."],
 
+        "In the context of the Employment Act, which of the following best defines the role of a “manager”?": [
+            "A) Someone who performs technical work without supervisory responsibilities.",
+            "B) An employee involved in recruitment but with no authority to discipline staff.",
+            "C) An individual responsible for formulating strategies and making significant operational decisions.",
+            "D) A worker who supervises manual workers without performing any managerial tasks."],
     }
 
     # Define correct answers
