@@ -6,8 +6,8 @@ from openai import OpenAI
 
 
 def chatbot(pdf_text):
-    st.write("hello world")
-    st.write(pdf_text)
+    #working
+    #st.write(pdf_text)
 
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
