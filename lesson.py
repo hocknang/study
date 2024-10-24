@@ -57,7 +57,7 @@ def init():
     if st.secrets["PASSWORD"] == password:
         st.success("Hello world")
     else:
-        st.fail("Invalid Password")
+        st.error("Invalid Password")
 
 def home():
 
