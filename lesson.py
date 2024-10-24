@@ -50,7 +50,9 @@ def readPDF(response):
         st.write("Not able to read the pdf")
 
 def home():
-    st.expander("Hello World")
+
+    with st.expander("Show Extracted Text from PDF"):
+        st.text_area("PDF Content", value="Hello world", height=300)
 
     st.title("Term & Condition")
     st.write('Hi this is Term & Condition Explorer ChatBot')
