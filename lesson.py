@@ -4,9 +4,8 @@ from PyPDF2 import PdfReader
 from io import BytesIO
 from openai import OpenAI
 
-pdf_text = None
 
-def chatbot():
+def chatbot(pdf_text):
     st.write("hello world")
     st.write(pdf_text)
 
@@ -38,7 +37,7 @@ def readContentPDF(pdf_reader):
         st.write("### Extracted PDF Text:")
         #Working
         #st.write(pdf_text)
-        chatbot()
+        chatbot(pdf_text)
     else:
         st.write("No text could be extracted from the PDF.")
 
