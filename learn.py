@@ -4,6 +4,13 @@ from openai import OpenAI
 def home():
      st.title("Chatbot Learning")
 
+     condition = "IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters." \
+                 "Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output." \
+                 "Always consult with qualified professionals for accurate and personalized advice."
+
+     with st.expander("Disclaimer on the main page of your application"):
+          st.text_area("Disclaimer Content", value=condition, height=150)
+
      client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
      if "openai_model" not in st.session_state:

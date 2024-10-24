@@ -59,7 +59,7 @@ def home():
                 "Always consult with qualified professionals for accurate and personalized advice."
 
     with st.expander("Disclaimer on the main page of your application"):
-        st.text_area("PDF Content", value=condition, height=150)
+        st.text_area("Disclaimer Content", value=condition, height=150)
 
     # Prompt the user to choose how they'd like to provide the document
     st.write("Would you prefer to upload a file or provide a document URL?")
