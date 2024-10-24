@@ -90,9 +90,11 @@ def home():
         st.write(f"URL provided: {document_url}")
         #
         if st.button("Submit"):
-            pdfReader(document_url, uploaded_file)
+            pdf_text_Url = pdfReader(document_url, uploaded_file)
 
     #st.write('pdf Text File: ' + str(pdf_text_File))
+
+    st.write("pdf URL Text: " + str(pdf_text_Url))
 
     if pdf_text_File is not None:
         st.session_state.pdf_content = pdf_text_File
