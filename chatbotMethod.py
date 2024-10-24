@@ -16,4 +16,4 @@ def home(pdf_text):
 
     # React to user input
     if prompt := st.chat_input("What is up?"):
-        st.chat_message("user").markdown(prompt)
+        st.write(prompt)
