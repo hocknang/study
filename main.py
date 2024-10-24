@@ -2,6 +2,7 @@ import streamlit as st
 import lesson as lesson
 import learn as learn
 import question as question
+import employment as employment
 
 #Define the pages: 
 def page_home():
@@ -12,12 +13,16 @@ def page_learn():
 
 def page_question():
     question.home()
+
+def page_employment():
+    employment.home()
     
 # Create a dictionary of pages
 pages = {
     "Explorer Chatbots (Retrieving from File Or Url)": page_home,
     "Testing Chatbots (Retrieving From Internet)" : page_learn,
-    "Knowledge & Understanding (MCQ)" : page_question 
+    "Knowledge & Understanding (MCQ) - HDB" : page_question,
+    "Knowledge & Understanding (MCQ) - MOM" : page_employment
 }
 
 # Add a sidebar for navigation
