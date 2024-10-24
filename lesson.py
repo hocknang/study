@@ -83,8 +83,6 @@ def home():
     pdf_text_File = None
     pdf_text_Url = None
 
-    isReadFile = False
-
     # Create a dropdown for the user to select an option
     option = st.selectbox(
         "Choose an option:",
@@ -118,8 +116,10 @@ def home():
 
     #st.write("pdf URL Text: " + str(pdf_text_Url))
 
+    st.session_state['condition'] = False
+
     if pdf_text_File is not None:
-        isReadFile = True
+        st.session_state['condition'] = True
         st.write("Hit")
         st.session_state.pdf_content = pdf_text_File
 
@@ -140,7 +140,7 @@ def home():
             st.markdown(message["content"])
 
     if prompt := st.chat_input("What is up?"):
-        if isReadFile:
+        if st.session_state['condition']:
             st.write("Hit 2")
             combined_content = (
                 f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
