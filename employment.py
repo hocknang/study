@@ -21,6 +21,8 @@ def display_mcq(question, options, key):
 
 def home():
     # Define your questions and options
+    columnName = "Hello world"
+
     questions = {
         "Under the Employment Act, which of the following categories of employees is explicitly excluded from Part IV provisions regarding rest days and hours of work?":
             ["A) Employees earning less than $2,600", "B) Workmen earning less than $4,500", "C) Managers and executives regardless of salary",
@@ -34,6 +36,14 @@ def home():
                                                                     "B) They must operate commercial vehicles.",
                                                                     "C) They must perform manual work more than half their working time.",
                                                                     "D) They must be paid on a monthly basis."],
+
+        f"Column name is **{columnName}**": [
+            "A) It includes all bonuses and allowances.",
+            "B) It includes overtime payments and annual wage supplements.",
+            "C) It is the fixed amount earned before deductions and excludes bonuses and allowances.",
+            "D) They must be paid on a monthly basis."],
+
+
     }
 
     # Define correct answers
