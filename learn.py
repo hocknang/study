@@ -1,5 +1,5 @@
 import streamlit as st
-import from openai import OpenAI
+from openai import OpenAI
 
 def home():
      st.title("Chatbot Learning")
