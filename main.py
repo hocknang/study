@@ -6,7 +6,7 @@ import employment as employment
 
 #Define the pages: 
 def page_home():
-    lesson.home()
+    lesson.init()
 
 def page_learn():
     learn.home()

@@ -49,6 +49,11 @@ def readPDF(response):
     else:
         st.write("Not able to read the pdf")
 
+def init():
+    st.write("Please enter your password:")
+
+    password = st.text_input("Password", type="password")
+
 def home():
 
     st.title("Term & Condition")
