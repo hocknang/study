@@ -4,40 +4,6 @@ from PyPDF2 import PdfReader
 from io import BytesIO
 from openai import OpenAI
 
-
-def chatbot(pdf_text):
-    #working
-    st.title("Chatbot Learning")
-
-    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
-    if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-4o-mini"
-
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-
-    if prompt := st.chat_input("What is up?"):
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
-
-        with st.chat_message("assistant"):
-            stream = client.chat.completions.create(
-                model=st.session_state["openai_model"],
-                messages=[
-                    {"role": m["role"], "content": m["content"]}
-                    for m in st.session_state.messages
-                ],
-                stream=True,
-            )
-            response = st.write_stream(stream)
-        st.session_state.messages.append({"role": "assistant", "content": response})
-
 def pdfReader(document_url, uploaded_file):
     if document_url is not None:
         st.write(f"URL provided: {document_url}")
@@ -66,7 +32,6 @@ def readContentPDF(pdf_reader):
         st.write("### Extracted PDF Text:")
         #Working
         #st.write(pdf_text)
-        chatbot(pdf_text)
     else:
         st.write("No text could be extracted from the PDF.")
 
@@ -81,7 +46,6 @@ def readPDF(response):
 
     else:
         st.write("Not able to read the pdf")
-
 
 def home():
     st.title("Term & Condition")
@@ -122,6 +86,38 @@ def home():
         #
         if st.button("Submit"):
             pdfReader(document_url, uploaded_file)
+
+    #LLM Chatbot
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+    if "openai_model" not in st.session_state:
+        st.session_state["openai_model"] = "gpt-4o-mini"
+
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    if prompt := st.chat_input("What is up?"):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        with st.chat_message("assistant"):
+            stream = client.chat.completions.create(
+                model=st.session_state["openai_model"],
+                messages=[
+                    {"role": m["role"], "content": m["content"]}
+                    for m in st.session_state.messages
+                ],
+                stream=True,
+            )
+            response = st.write_stream(stream)
+        st.session_state.messages.append({"role": "assistant", "content": response})
+
+
 
     '''
     if st.button("Submit"):
