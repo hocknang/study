@@ -23,6 +23,7 @@ def home():
     # Define your questions and options
     columnName = "basic salary"
     columnName1 = "workman"
+    columnName2 = "manager"
 
     questions = {
         "Under the Employment Act, which of the following categories of employees is explicitly excluded from Part IV provisions regarding rest days and hours of work?":
@@ -74,7 +75,7 @@ def home():
             "C) Their classification depends on the nature of their employment contract.",
             "D) They are exempt from the Employment Act."],
 
-        "In the context of the Employment Act, which of the following best defines the role of a “manager”?": [
+        "fIn the context of the Employment Act, which of the following best defines the role of a **{columnName1}**?": [
             "A) Someone who performs technical work without supervisory responsibilities.",
             "B) An employee involved in recruitment but with no authority to discipline staff.",
             "C) An individual responsible for formulating strategies and making significant operational decisions.",
