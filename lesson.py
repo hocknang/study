@@ -130,6 +130,8 @@ def home():
 
     #LLM Chatbot (General)
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    if 'isReadingFile' not in st.session_state:
+        st.session_state.isReadingFile = False  # Initialize it as False
 
     if "openai_model" not in st.session_state:
         st.session_state["openai_model"] = "gpt-4o-mini"
