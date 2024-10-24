@@ -118,6 +118,8 @@ def home():
 
     st.session_state.condition = False
 
+    isReadingFile = False
+
     if pdf_text_File is not None:
         st.session_state.condition = True
         st.write("Hit")
@@ -139,7 +141,9 @@ def home():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    st.write(str(st.session_state.condition) + "Nice Hit")
+    isReadingFile = bool(st.session_state.condition)
+
+    st.write(str(isReadingFile) + "Nice Hit")
 
     if prompt := st.chat_input("What is up?"):
         if pdf_text_File is not None:
