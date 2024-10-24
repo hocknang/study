@@ -94,11 +94,13 @@ def home():
 
     #st.write('pdf Text File: ' + str(pdf_text_File))
 
-    st.write("pdf URL Text: " + str(pdf_text_Url))
+    #st.write("pdf URL Text: " + str(pdf_text_Url))
 
     if pdf_text_File is not None:
         st.session_state.pdf_content = pdf_text_File
 
+    if pdf_text_Url is not None:
+        st.session_state.pdf_content = pdf_text_Url
 
     #LLM Chatbot (General)
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
@@ -114,9 +116,13 @@ def home():
             st.markdown(message["content"])
 
     if prompt := st.chat_input("What is up?"):
-        if pdf_text_File is not None:
+        if pdf_text_File is not None or pdf_text_Url is not None:
             combined_content = (
                 f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
+                f"User question: {prompt}\n"
+            )
+        else :
+            combined_content = (
                 f"User question: {prompt}\n"
             )
         st.session_state.messages.append({"role": "user", "content": combined_content})
