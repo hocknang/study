@@ -224,8 +224,8 @@ def home():
         st.markdown(user_query)
 
     with st.chat_message("assistant"):
-    response1 = st.write_stream(response)
-    st.session_state.messages.append({"role": "assistant", "content": response1})
+        st.write_stream(response)
+        st.session_state.messages.append({"role": "assistant", "content": response})
 
     '''
     if st.button("Submit"):
