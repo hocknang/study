@@ -7,6 +7,7 @@ from io import BytesIO
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+from langchain.chains import RetrievalQA
 from openai import OpenAI
 
 
