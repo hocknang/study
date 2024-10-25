@@ -4,6 +4,7 @@ import learn as learn
 import question as question
 import employment as employment
 import about as about
+import rag as rag
 
 #Define the pages:
 def page_about():
@@ -20,14 +21,19 @@ def page_question():
 
 def page_employment():
     employment.home()
+
+def page_rag():
+    rag.home()
     
 # Create a dictionary of pages
 pages = {
-    "Explorer Chatbots (Retrieving from File Or Url) -Normal": page_home,
+    "Explorer Chatbots (Retrieving from File Or Url) - Normal": page_home,
     "Testing Chatbots (Retrieving From Internet) - Normal" : page_learn,
     "Knowledge & Understanding (MCQ) - HDB" : page_question,
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
-    "About Us" : page_about
+    "About Us" : page_about,
+    "Explorer Chatbots (Retrieving from File Or Url) - RAG": page_rag()
+
 }
 
 # Add a sidebar for navigation
