@@ -161,11 +161,10 @@ def home():
 
     if pdf_text_File is not None:
         st.session_state.isReadingFile = True
-        st.write("Hit")
-        #st.session_state.pdf_content = pdf_text_File
         pdf_split_File = split_text_into_chunks(pdf_text_File, chunk_size, chunk_overlap)
         vector_store_File = FAISS.from_texts(pdf_split_File, embeddings)
-        #st.write(vector_store_File)
+
+        """
         llm = OpenAI()  # Adjust temperature as needed
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
@@ -179,6 +178,7 @@ def home():
         if user_query:
             response = qa_chain.run(user_query, temperature=0)
             st.write(response)
+        """
 
         """
         for i, chunk in enumerate(pdf_split_File):
@@ -194,6 +194,9 @@ def home():
         st.session_state.isReadingFile = False  # Initialize it as False
 
     isReadingFile = bool(st.session_state.isReadingFile)
+
+    if isReadingFile:
+        user_query = st.text_input("Ask a question about the PDF:")
 
     '''
     if st.button("Submit"):
