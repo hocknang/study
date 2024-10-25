@@ -13,7 +13,7 @@ def home():
     '''
 
     st.markdown('''
-            :red[Streamlit]''')
+            :red[Uses finds]''')
 
     st.markdown('''
         :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
