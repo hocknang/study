@@ -32,7 +32,7 @@ pages = {
     "Knowledge & Understanding (MCQ) - HDB" : page_question,
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
     "About Us" : page_about,
-    "Explorer Chatbots (Retrieving from File Or Url) - RAG": page_rag()
+    "Explorer Chatbots (Retrieving from File Or Url) - RAG": page_rag
 
 }
 
