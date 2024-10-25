@@ -21,4 +21,14 @@ def home():
                 legal terms. The LLM also helps by turning :blue-background[complicated legal words into simple language]
                 that anyone can understand.''')
 
+    st.subheader("Impact")
+
+    st.markdown('''
+                   With Large Language Models :blue-background[(LLMs)] people can :blue-background[search] the 
+                   :blue-background[(Terms and Conditions (T&C)] by :blue-background[typing questions] in their 
+                   :blue-background[own words], without needing to know any special
+                   legal terms. The LLM also helps by turning :blue-background[complicated legal words into simple language]
+                   that anyone can understand.''')
+
+
 
