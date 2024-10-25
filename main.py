@@ -31,8 +31,8 @@ pages = {
     "Testing Chatbots (Retrieving From Internet) - Normal" : page_learn,
     "Knowledge & Understanding (MCQ) - HDB" : page_question,
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
-    "About Us" : page_about,
     "Explorer Chatbots (Retrieving from File Or Url) - RAG": page_rag
+    "About Us": page_about,
 
 }
 
