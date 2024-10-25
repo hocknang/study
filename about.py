@@ -34,5 +34,8 @@ def home():
 
     st.markdown(''':blue-background[Everyone] who needs to retrieve information in the Terms and Conditions (T&C).''')
 
+    st.subheader("Data Classification & Sensitivity")
+
+    st.markdown('''Official (Open) / Non-sensitive''')
 
 
