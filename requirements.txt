@@ -2,4 +2,3 @@ streamlit
 openai
 requests
 PyPDF2
-RecursiveCharacterTextSplitter
