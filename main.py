@@ -23,7 +23,7 @@ def page_employment():
     employment.home()
 
 def page_rag():
-    rag.home()
+    rag.init()
     
 # Create a dictionary of pages
 pages = {
