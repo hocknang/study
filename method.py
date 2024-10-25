@@ -24,3 +24,8 @@ def home():
 
     st.markdown(''':blue-background[Step 5:] Combine the :blue-background[retriever] with a language model in 
     a :blue-background[Retrieval-Augmented Generation (RAG) chain.]''')
+
+    st.markdown(''':blue-background[Step 5:] Combine the :blue-background[retriever] with a language model in 
+       a :blue-background[Retrieval-Augmented Generation (RAG) chain.]''')
+
+    st.markdown(''':blue-background[Step 6:] Run :blue-background[Query] with :blue-background[User Prompt:]''')
