@@ -165,7 +165,7 @@ def home():
         #st.session_state.pdf_content = pdf_text_File
         pdf_split_File = split_text_into_chunks(pdf_text_File, chunk_size, chunk_overlap)
         vector_store_File = FAISS.from_texts(pdf_split_File, embeddings)
-        st.write(vector_store_File)
+        #st.write(vector_store_File)
         llm = OpenAI(temperature=0)  # Adjust temperature as needed
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
