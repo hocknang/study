@@ -5,6 +5,7 @@ import question as question
 import employment as employment
 import about as about
 import rag as rag
+import method as method
 
 #Define the pages:
 def page_about():
@@ -24,6 +25,9 @@ def page_employment():
 
 def page_rag():
     rag.init()
+
+def page_method():
+    method.home()
     
 # Create a dictionary of pages
 pages = {
@@ -33,6 +37,7 @@ pages = {
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
     "Explorer Chatbots (Retrieving from File Or Url) - RAG": page_rag,
     "About Us": page_about,
+    "Methodology": page_method,
 
 }
 
