@@ -38,4 +38,10 @@ def home():
 
     st.markdown('''Official (Open) / Non-sensitive''')
 
+    st.subheader("2 Use Cases")
+
+    st.markdown(''':blue-background[1. Use Case: ] Application for Flat Rental (HDB)''')
+
+    st.markdown(''':blue-background[2. Use Case: ] Employment Act: who it covers (MOM)''')
+
 
