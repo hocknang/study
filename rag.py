@@ -119,6 +119,9 @@ def home():
     chunk_size = 26
     chunk_overlap = 4
 
+    #chatbot
+    temperature = 0
+
     # Create a dropdown for the user to select an option
     option = st.selectbox(
         "Choose an option:",
@@ -193,10 +196,36 @@ def home():
     if 'isReadingFile' not in st.session_state:
         st.session_state.isReadingFile = False  # Initialize it as False
 
+    if "openai_model" not in st.session_state:
+        st.session_state["openai_model"] = "gpt-4o-mini"
+
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
     isReadingFile = bool(st.session_state.isReadingFile)
+
+    llm = OpenAI()  # Adjust temperature as needed
+    qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        chain_type="stuff",
+        retriever=vector_store_File.as_retriever(),
+        return_source_documents = True
+    )
 
     if isReadingFile:
         user_query = st.text_input("Ask a question about the PDF:")
+        response = qa_chain.run(user_query, temperature=temperature)
+
+    with st.chat_message("user"):
+        st.markdown(user_query)
+
+    with st.chat_message("assistant"):
+    response1 = st.write_stream(response)
+    st.session_state.messages.append({"role": "assistant", "content": response1})
 
     '''
     if st.button("Submit"):
