@@ -5,7 +5,7 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from openai import OpenAI
 
 
