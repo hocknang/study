@@ -23,8 +23,8 @@ def page_employment():
     
 # Create a dictionary of pages
 pages = {
-    "Explorer Chatbots (Retrieving from File Or Url)": page_home,
-    "Testing Chatbots (Retrieving From Internet)" : page_learn,
+    "Explorer Chatbots (Retrieving from File Or Url) -Normal": page_home,
+    "Testing Chatbots (Retrieving From Internet) - Normal" : page_learn,
     "Knowledge & Understanding (MCQ) - HDB" : page_question,
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
     "About Us" : page_about
