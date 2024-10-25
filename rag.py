@@ -112,10 +112,6 @@ def home():
     pdf_text_File = None
     pdf_text_Url = None
 
-    pdf_split_File = None
-
-    vector_store_File = None
-
     chunk_size = 26
     chunk_overlap = 4
 
@@ -166,8 +162,6 @@ def home():
         st.session_state.isReadingFile = True
         pdf_split_File = split_text_into_chunks(pdf_text_File, chunk_size, chunk_overlap)
         vector_store_File = FAISS.from_texts(pdf_split_File, embeddings)
-
-        """
         llm = OpenAI()  # Adjust temperature as needed
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
@@ -175,6 +169,7 @@ def home():
             retriever=vector_store_File.as_retriever()
         )
 
+        """
         # User input for querying the document
         user_query = st.text_input("Ask a question about the PDF:")
 
@@ -208,24 +203,16 @@ def home():
 
     isReadingFile = bool(st.session_state.isReadingFile)
 
-    llm = OpenAI()  # Adjust temperature as needed
-    qa_chain = RetrievalQA.from_chain_type(
-        llm=llm,
-        chain_type="stuff",
-        retriever=vector_store_File.as_retriever(),
-        return_source_documents = True
-    )
-
     if isReadingFile:
         user_query = st.text_input("Ask a question about the PDF:")
-        response = qa_chain.run(user_query, temperature=temperature)
-
-    with st.chat_message("user"):
-        st.markdown(user_query)
-
-    with st.chat_message("assistant"):
-        st.write_stream(response)
+        with st.chat_message("user"):
+            st.markdown(user_query)
+        response = qa_chain.run(user_query, temperature=temperature)  # Specify temperature during the run
+        with st.chat_message("assistant"):
+            st.write_stream(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+
 
     '''
     if st.button("Submit"):
