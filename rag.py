@@ -5,6 +5,7 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
+from langchain.embeddings import OpenAIEmbeddings
 from openai import OpenAI
 
 
@@ -151,14 +152,19 @@ def home():
 
     isReadingFile = False
 
+    # Create embeddings
+    embeddings = OpenAIEmbeddings()
+
     if pdf_text_File is not None:
         st.session_state.isReadingFile = True
         st.write("Hit")
         #st.session_state.pdf_content = pdf_text_File
         pdf_split_File = split_text_into_chunks(pdf_text_File, chunk_size, chunk_overlap)
 
+        """
         for i, chunk in enumerate(pdf_split_File):
             st.write(f"Chunk {i + 1}: {chunk}")
+        """
 
     if pdf_text_Url is not None:
         st.session_state.pdf_content = pdf_text_Url
