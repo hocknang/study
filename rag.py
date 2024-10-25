@@ -5,7 +5,6 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
 from openai import OpenAI
 
 
@@ -151,9 +150,6 @@ def home():
     st.session_state.condition = False
 
     isReadingFile = False
-
-    # Create embeddings
-    embeddings_model = OpenAIEmbeddings(model='text-embedding-3-small')
 
     if pdf_text_File is not None:
         st.session_state.isReadingFile = True
