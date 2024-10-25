@@ -166,7 +166,7 @@ def home():
         pdf_split_File = split_text_into_chunks(pdf_text_File, chunk_size, chunk_overlap)
         vector_store_File = FAISS.from_texts(pdf_split_File, embeddings)
         #st.write(vector_store_File)
-        llm = OpenAI(temperature=0)  # Adjust temperature as needed
+        llm = OpenAI()  # Adjust temperature as needed
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
             chain_type="stuff",
@@ -177,7 +177,7 @@ def home():
         user_query = st.text_input("Ask a question about the PDF:")
 
         if user_query:
-            response = qa_chain.run(user_query)
+            response = qa_chain.run(user_query, temperature=0)
             st.write(response)
 
         """
