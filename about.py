@@ -13,7 +13,7 @@ def home():
     '''
 
     st.markdown('''
-            Uses finds it very''')
+            Uses finds it very :red[inefficiency] ''')
 
     st.markdown('''
         :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
