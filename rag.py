@@ -4,6 +4,7 @@ import requests
 import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
+from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
 from openai import OpenAI
 
 def pdfReader(document_url, uploaded_file):
@@ -135,7 +136,7 @@ def home():
 
     isReadingFile = bool(st.session_state.isReadingFile)
 
-    
+
     '''
     if st.button("Submit"):
         pdfReader(document_url, uploaded_file)
