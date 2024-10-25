@@ -14,5 +14,7 @@ def home():
 
     st.subheader("Proposed Solution")
 
+    st.markdown('''
+                With Large Language Models :blue-background[(LLMs)] ''')
 
 
