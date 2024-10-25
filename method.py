@@ -14,3 +14,6 @@ def home():
 
     st.markdown(''':blue-background[Step 2:] The text from the :blue-background[documents]
      is split into :blue-background[smaller chunks] or :blue-background[segments.]''')
+
+    st.markdown(''':blue-background[Step 3:] Generate :blue-background[embeddings] for each chunk of text 
+    and :blue-background[store] these embeddings in a vector database, ''')
