@@ -15,6 +15,9 @@ def home():
     st.subheader("Proposed Solution")
 
     st.markdown('''
-                With Large Language Models :blue-background[(LLMs)] ''')
+                With Large Language Models :blue-background[(LLMs)] people can :blue-background[search] the 
+                Terms and Conditions blue-background[(T&C)] by :blue-background[typing questions] in their own words, without needing to know any special
+                legal terms. The LLM also helps by turning complicated legal words into simple language that anyone 
+                can understand.''')
 
 
