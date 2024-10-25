@@ -18,7 +18,7 @@ def home():
                 With Large Language Models :blue-background[(LLMs)] people can :blue-background[search] the 
                 Terms and Conditions blue-background[(T&C)] by :blue-background[typing questions] in their 
                 :blue-background[own words], without needing to know any special
-                legal terms. The LLM also helps by turning :blue-background [complicated legal words into simple language]
+                legal terms. The LLM also helps by turning :blue-background[complicated legal words into simple language]
                 that anyone can understand.''')
 
 
