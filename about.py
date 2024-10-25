@@ -30,5 +30,9 @@ def home():
                    they’ll be explained in :blue-background[plain language.]
                    This will make everything :blue-background[clearer] and :blue-background[faster] to find.''')
 
+    st.subheader("Project Sponsors & Users")
+
+    st.markdown(''':blue-background[Everyone] who needs to retrieve information in the Terms and Conditions (T&C).''')
+
 
 
