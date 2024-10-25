@@ -81,6 +81,8 @@ def readPDF(response):
 def init():
     st.write("Please enter your password:")
 
+    st.text_input("")
+
     password = st.text_input("Password", type="password")
 
     if st.secrets["PASSWORD"] == password:
@@ -185,6 +187,14 @@ def home():
 
     if pdf_text_Url is not None:
         st.session_state.pdf_content = pdf_text_Url
+        pdf_split_Url = split_text_into_chunks(pdf_text_Url, chunk_size, chunk_overlap)
+        vector_store_Url = FAISS.from_texts(pdf_split_Url, embeddings)
+        llm = OpenAI()  # Adjust temperature as needed
+        qa_chain = RetrievalQA.from_chain_type(
+            llm=llm,
+            chain_type="stuff",
+            retriever=vector_store_Url.as_retriever()
+        )
 
     #LLM Model (RAG)
 
@@ -211,8 +221,6 @@ def home():
         with st.chat_message("assistant"):
             st.write_stream(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
-
-
 
     '''
     if st.button("Submit"):
