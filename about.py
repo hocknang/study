@@ -13,6 +13,6 @@ def home():
 
     st.markdown('''
         :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
-        :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.'''
+        :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.''')
 
 
