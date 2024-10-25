@@ -81,7 +81,7 @@ def readPDF(response):
 def init():
     st.write("Please enter your password:")
 
-    password = "";
+    password = ""
 
     password = st.text_input("Password", type="password")
     if st.secrets["PASSWORD"] == password:
