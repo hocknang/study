@@ -145,11 +145,11 @@ def home():
 
     isReadingFile = bool(st.session_state.isReadingFile)
 
-    st.write(str(isReadingFile) + "Nice Hit")
+   # st.write(str(isReadingFile) + "Nice Hit")
 
     if prompt := st.chat_input("What is up?"):
         if isReadingFile:
-            st.write("Hit 2")
+            st.write("Successfully Read from the file")
             combined_content = (
                 f"Here is the content from the uploaded document:\n\n{st.session_state.pdf_content}\n\n"
                 f"User question: {prompt}\n"
