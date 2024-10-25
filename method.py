@@ -17,3 +17,5 @@ def home():
 
     st.markdown(''':blue-background[Step 3:] Generate :blue-background[embeddings] for each chunk of text 
     and :blue-background[store] these embeddings in a vector database, ''')
+
+    st.subheader("Retrieval")
