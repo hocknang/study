@@ -128,7 +128,14 @@ def home():
     if pdf_text_Url is not None:
         st.session_state.pdf_content = pdf_text_Url
 
+    #LLM Model (RAG)
 
+    if 'isReadingFile' not in st.session_state:
+        st.session_state.isReadingFile = False  # Initialize it as False
+
+    isReadingFile = bool(st.session_state.isReadingFile)
+
+    
     '''
     if st.button("Submit"):
         pdfReader(document_url, uploaded_file)
