@@ -13,7 +13,8 @@ def home():
     '''
 
     st.markdown('''
-            Uses finds it very :red[inefficiency] and :red[time-consuming] process of navigating through extensive''')
+            Uses finds it very :red[inefficiency] and :red[time-consuming] process of navigating through extensive
+            :blue-background[Terms and Conditions (T&C) document]''')
 
     st.markdown('''
         :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
