@@ -2,4 +2,7 @@ streamlit
 openai
 requests
 PyPDF2
+langchain-community
+langchain-openai
 langchain
+faiss==1.8.0
