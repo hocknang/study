@@ -19,3 +19,8 @@ def home():
     and :blue-background[store] these embeddings in a vector database, ''')
 
     st.subheader("Retrieval")
+
+    st.markdown(''':blue-background[Step 4:] Initialize the :blue-background[retriever] from the vector store''')
+
+    st.markdown(''':blue-background[Step 5:] Combine the :blue-background[retriever] with a language model in 
+    a :blue-background[Retrieval-Augmented Generation (RAG) chain.]''')
