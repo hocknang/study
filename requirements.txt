@@ -2,3 +2,4 @@ streamlit
 openai
 requests
 PyPDF2
+TfidfVectorizer
