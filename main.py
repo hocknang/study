@@ -27,7 +27,7 @@ pages = {
     "Testing Chatbots (Retrieving From Internet)" : page_learn,
     "Knowledge & Understanding (MCQ) - HDB" : page_question,
     "Knowledge & Understanding (MCQ) - MOM" : page_employment,
-    "About Us" : page_about()
+    "About Us" : page_about
 }
 
 # Add a sidebar for navigation
